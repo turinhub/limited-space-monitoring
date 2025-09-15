@@ -328,13 +328,13 @@ export function MonitoringMatrix() {
               }}>
                 <div className="point-info">
                   <div className="point-id" style={{
-                    fontSize: '12px',
+                    fontSize: '16px',
                     fontWeight: 'bold',
                     color: '#4ecdc4',
                     marginBottom: '2px'
                   }}>{point.id}</div>
                   <div className="point-name" style={{
-                    fontSize: '10px',
+                    fontSize: '12px',
                     color: '#fff',
                     marginBottom: '1px'
                   }}>{point.name}</div>
@@ -379,14 +379,14 @@ export function MonitoringMatrix() {
                     padding: '0'  // 移除内边距
                   }}>
                     <span className="data-label" style={{
-                      fontSize: '14px',
+                      fontSize: '12px',
                       color: '#94a3b8',
                       lineHeight: '18px',
                       paddingLeft: '0'
                     }}>温度</span>
                     <span className="data-value" style={{ 
                       color: '#4ecdc4',
-                      fontSize: '10px',  // 减小字体
+                      fontSize: '12px',
                       fontWeight: '600',
                       lineHeight: '18px',
                       paddingRight: '4px'  // 添加少许右边距
@@ -407,14 +407,14 @@ export function MonitoringMatrix() {
                     padding: '0'
                   }}>
                     <span className="data-label" style={{
-                      fontSize: '14px',
+                      fontSize: '12px',
                       color: '#94a3b8',
                       lineHeight: '18px',
                       paddingLeft: '0'
                     }}>湿度</span>
                     <span className="data-value" style={{ 
                       color: '#4ecdc4',
-                      fontSize: '10px',
+                      fontSize: '12px',
                       fontWeight: '600',
                       lineHeight: '18px',
                       paddingRight: '4px'
@@ -435,14 +435,14 @@ export function MonitoringMatrix() {
                     padding: '0'
                   }}>
                     <span className="data-label" style={{
-                      fontSize: '10px',
+                      fontSize: '12px',
                       color: '#94a3b8',
                       lineHeight: '18px',
                       paddingLeft: '0'
                     }}>氧气</span>
                     <span className="data-value" style={{ 
                       color: point.oxygen < 20.5 ? '#ff6b6b' : '#4ecdc4',
-                      fontSize: '10px',
+                      fontSize: '12px',
                       fontWeight: '600',
                       lineHeight: '18px',
                       paddingRight: '4px'
@@ -463,14 +463,14 @@ export function MonitoringMatrix() {
                     padding: '0'
                   }}>
                     <span className="data-label" style={{
-                      fontSize: '10px',
+                      fontSize: '12px',
                       color: '#94a3b8',
                       lineHeight: '18px',
                       paddingLeft: '0'
                     }}>硫化氢</span>
                     <span className="data-value" style={{ 
                       color: point.h2s > 0.05 ? '#ff9ff3' : '#4ecdc4',
-                      fontSize: '10px',
+                      fontSize: '12px',
                       fontWeight: '600',
                       lineHeight: '18px',
                       paddingRight: '4px'
@@ -491,14 +491,14 @@ export function MonitoringMatrix() {
                     padding: '0'
                   }}>
                     <span className="data-label" style={{
-                      fontSize: '10px',
+                      fontSize: '12px',
                       color: '#94a3b8',
                       lineHeight: '18px',
                       paddingLeft: '0'
                     }}>二氧化碳</span>
                     <span className="data-value" style={{ 
                       color: point.co2 > 1000 ? '#feca57' : '#4ecdc4',
-                      fontSize: '10px',
+                      fontSize: '12px',
                       fontWeight: '600',
                       lineHeight: '18px',
                       paddingRight: '4px'
@@ -519,14 +519,14 @@ export function MonitoringMatrix() {
                     padding: '0'
                   }}>
                     <span className="data-label" style={{
-                      fontSize: '10px',
+                      fontSize: '12px',
                       color: '#94a3b8',
                       lineHeight: '18px',
                       paddingLeft: '0'
                     }}>一氧化碳</span>
                     <span className="data-value" style={{ 
                       color: point.co > 50 ? '#ff6b6b' : '#4ecdc4',
-                      fontSize: '10px',
+                      fontSize: '12px',
                       fontWeight: '600',
                       lineHeight: '18px',
                       paddingRight: '4px'
@@ -547,14 +547,14 @@ export function MonitoringMatrix() {
                     padding: '0'
                   }}>
                     <span className="data-label" style={{
-                      fontSize: '10px',
+                      fontSize: '12px',
                       color: '#94a3b8',
                       lineHeight: '18px',
                       paddingLeft: '0'
                     }}>甲烷</span>
                     <span className="data-value" style={{ 
                       color: point.methane > 2.5 ? '#feca57' : '#4ecdc4',
-                      fontSize: '10px',
+                      fontSize: '12px',
                       fontWeight: '600',
                       lineHeight: '18px',
                       paddingRight: '4px'

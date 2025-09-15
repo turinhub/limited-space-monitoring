@@ -196,15 +196,43 @@ export function EnvironmentMonitor() {
     pressure: 1013.2,
     airFlow: 2.3
   });
+  const [monitoringPoints, setMonitoringPoints] = useState<any[]>([]);
+
+  // 获取监测点数据
+  const fetchMonitoringData = async () => {
+    try {
+      const response = await fetch('/api/clickhouse/monitoring-points');
+      if (response.ok) {
+        const result = await response.json();
+        if (result.success && result.data && result.data.length > 0) {
+          setMonitoringPoints(result.data);
+          // 使用第一个监测点的温度和湿度数据
+          const firstPoint = result.data[0];
+          setEnvData(prev => ({
+            ...prev,
+            temperature: firstPoint.temperature || prev.temperature,
+            humidity: firstPoint.humidity || prev.humidity
+          }));
+        }
+      }
+    } catch (error) {
+      console.error('获取监测数据失败:', error);
+    }
+  };
 
   useEffect(() => {
+    // 初始加载数据
+    fetchMonitoringData();
+    
+    // 定期更新数据
     const interval = setInterval(() => {
-      setEnvData({
-        temperature: 23.5 + (Math.random() - 0.5) * 2,
-        humidity: 65.2 + (Math.random() - 0.5) * 10,
+      fetchMonitoringData();
+      // 只更新气压和风速的模拟数据
+      setEnvData(prev => ({
+        ...prev,
         pressure: 1013.2 + (Math.random() - 0.5) * 5,
         airFlow: 2.3 + (Math.random() - 0.5) * 0.5
-      });
+      }));
     }, 3000);
 
     return () => clearInterval(interval);
